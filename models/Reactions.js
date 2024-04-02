@@ -21,5 +21,11 @@ const reactionSchema = new Schema(
             get: createdAt => createdAt.toDateString()
         }
     },
+    {
+        toJSON: {
+            getters: true
+        }
+    }
 );
 
+module.exports = reactionSchema;
